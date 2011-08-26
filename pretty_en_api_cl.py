@@ -9,8 +9,11 @@ def process_url(url):
     loaded_result = json.loads(result)
     print json.dumps(loaded_result, sort_keys=True, indent=4)
 
-# get user input
-user_input = raw_input("Enter URL: ")
+# get user input - deprecated
+# user_input = raw_input("Enter URL: ") - deprecated
+
+# get user input from command line
+user_input = sys.argv[1]
 
 # run function
 process_url(user_input)
